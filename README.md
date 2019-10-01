@@ -1,12 +1,12 @@
-#AboutLibraries
+# AboutLibraries
 
 AboutLibraries is a library to offer you all the information you need of your libraries!
 
 Most modern apps feature an "Used Library"-Section and for this some information of those libs is required. As it gets annoying to copy those strings always to your app I've developed this small helper library to provide the required information.
 
 
-##Include in your project
-###Using Maven
+## Include in your project
+### Using Maven
 The AboutLibraries Library is pushed to [Maven Central], so you just need to add the following dependency to your `build.gradle`.
 
 ```javascript
@@ -23,10 +23,10 @@ maven {
 }
 ```
 
-##Usage
+## Usage
 You can use this library in a few different ways. You can create your own activity, including a custom style and just use the information, or you can use the built in Activity or Fragment and just pass the libs you would love to include.
-###Activity / Fragment
-####Fragment
+### Activity / Fragment
+#### Fragment
 ```java
 Bundle bundle = new Bundle();
 //Pass the fields of your application to the lib so it can find all external lib information
@@ -44,8 +44,8 @@ Fragment fragment = new LibsFragment();
 //Set the arguments
 fragment.setArguments(bundle);
 ```
-####Activity
-#####Code:
+#### Activity
+##### Code:
 ```java
 //Create an intent with context and the Activity class
 Intent i = new Intent(getApplicationContext(), LibsActivity.class);
@@ -69,7 +69,7 @@ i.putExtra(Libs.BUNDLE_TRANSLUCENTDECOR, true);
 //start the activity
 startActivity(i);
 ```
-#####Xml:
+##### Xml:
 ```xml
 <!-- Don't forget to define the Activity in the manifest -->
 <activity
@@ -77,7 +77,7 @@ startActivity(i);
 </activity>
 ```
 
-###Custom
+### Custom
 ------------
 Use the Library class and build your view on-your-own
 
@@ -93,12 +93,12 @@ libs.getLibrary("ActionBarSherlock")
 done.
 
 
-##Including in your library
+## Including in your library
 Create a {yourlib}_strings.xml in your values folder and define the required information.
 
 You can also find a sample in one of my other open source projects here: [LINK](https://github.com/mikepenz/AnimatedGridView/blob/master/library/src/main/res/values/info_strings.xml)
 
-###Sample *_strings.xml (ActionBarSherlock)
+### Sample *_strings.xml (ActionBarSherlock)
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
@@ -132,22 +132,22 @@ You can also find a sample in one of my other open source projects here: [LINK](
 ```
 
 
-##Contribute
+## Contribute
 You can contribute by creating an informationfile for a new library, and make a pull-request at the creators git repository. if he doesn't include the information file in his repo, or if the library isn't maintained anymore you can create a pull-request here.
 
 Please remind that if you make a pull-request here, that you have to change the *define_* string to *define_int_*. It is also very important that the *_strings.xml* has an unique filename (it should be named *{libraryidentifier}_strings.xml*
 
 
-##Contributors
+## Contributors
 none
 
 
-#Developed By
+# Developed By
 
 * Mike Penz - http://mikepenz.com - <penz@tundem.com>
 
 
-#License
+# License
 
     Copyright 2014 Mike Penz
 
